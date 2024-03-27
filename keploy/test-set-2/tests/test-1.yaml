@@ -1,0 +1,43 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/tables/uk_cities
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.81.0
+        body: ""
+        timestamp: 2024-03-27T20:52:16.156790867+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Content-Length: "2461"
+            Content-Type: application/json
+            Date: Wed, 27 Mar 2024 15:22:16 GMT
+            Vary: origin,access-control-request-method,access-control-request-headers
+        body: '[{"city":"Elgin, Scotland, the UK","lat":57.653484,"lng":-3.335724},{"city":"Stoke-on-Trent, Staffordshire, the UK","lat":53.002666,"lng":-2.179404},{"city":"Solihull, Birmingham, UK","lat":52.412811,"lng":-1.778197},{"city":"Cardiff, Cardiff county, UK","lat":51.481583,"lng":-3.17909},{"city":"Eastbourne, East Sussex, UK","lat":50.768036,"lng":0.290472},{"city":"Oxford, Oxfordshire, UK","lat":51.752022,"lng":-1.257677},{"city":"London, UK","lat":51.509865,"lng":-0.118092},{"city":"Swindon, Swindon, UK","lat":51.568535,"lng":-1.772232},{"city":"Gravesend, Kent, UK","lat":51.441883,"lng":0.370759},{"city":"Northampton, Northamptonshire, UK","lat":52.240479,"lng":-0.902656},{"city":"Rugby, Warwickshire, UK","lat":52.370876,"lng":-1.265032},{"city":"Sutton Coldfield, West Midlands, UK","lat":52.570385,"lng":-1.824042},{"city":"Harlow, Essex, UK","lat":51.772938,"lng":0.10231},{"city":"Aberdeen, Aberdeen City, UK","lat":57.149651,"lng":-2.099075},{"city":"Swansea, Swansea, UK","lat":51.621441,"lng":-3.943646},{"city":"Chesterfield, Derbyshire, UK","lat":53.235046,"lng":-1.421629},{"city":"Londonderry, Derry, UK","lat":55.006763,"lng":-7.318268},{"city":"Salisbury, Wiltshire, UK","lat":51.068787,"lng":-1.794472},{"city":"Weymouth, Dorset, UK","lat":50.614429,"lng":-2.457621},{"city":"Wolverhampton, West Midlands, UK","lat":52.59137,"lng":-2.110748},{"city":"Preston, Lancashire, UK","lat":53.765762,"lng":-2.692337},{"city":"Bournemouth, UK","lat":50.720806,"lng":-1.904755},{"city":"Doncaster, South Yorkshire, UK","lat":53.52282,"lng":-1.128462},{"city":"Ayr, South Ayrshire, UK","lat":55.458565,"lng":-4.629179},{"city":"Hastings, East Sussex, UK","lat":50.854259,"lng":0.573453},{"city":"Bedford, UK","lat":52.136436,"lng":-0.460739},{"city":"Basildon, Essex, UK","lat":51.572376,"lng":0.470009},{"city":"Chippenham, Wiltshire, UK","lat":51.458057,"lng":-2.116074},{"city":"Belfast, UK","lat":54.607868,"lng":-5.926437},{"city":"Uckfield, East Sussex, UK","lat":50.967941,"lng":0.085831},{"city":"Worthing, West Sussex, UK","lat":50.825024,"lng":-0.383835},{"city":"Leeds, West Yorkshire, UK","lat":53.801277,"lng":-1.548567},{"city":"Kendal, Cumbria, UK","lat":54.328506,"lng":-2.74387},{"city":"Plymouth, UK","lat":50.376289,"lng":-4.143841},{"city":"Haverhill, Suffolk, UK","lat":52.080875,"lng":0.444517},{"city":"Frankton, Warwickshire, UK","lat":52.328415,"lng":-1.377561},{"city":"Inverness, the UK","lat":57.477772,"lng":-4.224721}]'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-03-27T20:52:18.181219975+05:30
+    objects: []
+    assertions:
+        noise:
+            body.lat: []
+            body.lng: []
+            header.Content-Length: []
+            header.Date: []
+    created: 1711552938
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/api/tables/uk_cities \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.81.0' \

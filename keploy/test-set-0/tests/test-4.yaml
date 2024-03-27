@@ -1,0 +1,45 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-4
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/schema
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.81.0
+        body: ""
+        timestamp: 2024-03-27T20:39:35.698752559+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Content-Length: "7252"
+            Content-Type: application/json
+            Date: Wed, 27 Mar 2024 15:09:35 GMT
+            Vary: origin,access-control-request-method,access-control-request-headers
+        body: '{"spacex_launches":{"fields":[{"name":"auto_update","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"capsules","data_type":{"List":{"name":"item","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"cores","data_type":{"List":{"name":"item","data_type":{"Struct":[{"name":"core","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"flight","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"gridfins","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"landing_attempt","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"legs","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"reused","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"landing_success","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"landing_type","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"landpad","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"crew","data_type":{"List":{"name":"item","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"date_local","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"date_precision","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"date_unix","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"date_utc","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"details","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"failures","data_type":{"List":{"name":"item","data_type":{"Struct":[{"name":"reason","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"time","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"altitude","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"fairings","data_type":{"Struct":[{"name":"recovered","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"recovery_attempt","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"reused","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"ships","data_type":{"List":{"name":"item","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"flight_number","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"id","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"launchpad","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"links","data_type":{"Struct":[{"name":"article","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"flickr","data_type":{"Struct":[{"name":"original","data_type":{"List":{"name":"item","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"small","data_type":{"List":{"name":"item","data_type":"Null","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"patch","data_type":{"Struct":[{"name":"large","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"small","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"reddit","data_type":{"Struct":[{"name":"launch","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"media","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"recovery","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"campaign","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"webcast","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"wikipedia","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"youtube_id","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"presskit","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}]},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"name","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"net","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"payloads","data_type":{"List":{"name":"item","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"rocket","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"ships","data_type":{"List":{"name":"item","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}},"nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"static_fire_date_unix","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"static_fire_date_utc","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"success","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"tbd","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"upcoming","data_type":"Boolean","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"window","data_type":"Int64","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}},{"name":"launch_library_id","data_type":"Utf8","nullable":true,"dict_id":0,"dict_is_ordered":false,"metadata":{}}],"metadata":{}}}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-03-27T20:39:37.761930891+05:30
+    objects: []
+    assertions:
+        noise:
+            body.spacex_launches.fields.data_type.Struct.data_type.Struct.data_type.List.data_type: []
+            body.spacex_launches.fields.data_type.Struct.data_type.Struct.data_type.List.dict_is_ordered: []
+            body.spacex_launches.fields.data_type.Struct.data_type.Struct.data_type.List.name: []
+            body.spacex_launches.fields.data_type.Struct.data_type.Struct.data_type.List.nullable: []
+            header.Content-Length: []
+            header.Date: []
+    created: 1711552177
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/api/schema \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.81.0' \
+      --header 'Accept: */*' \
