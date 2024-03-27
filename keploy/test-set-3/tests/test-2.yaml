@@ -1,0 +1,45 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/graphql
+        header:
+            Accept: '*/*'
+            Content-Length: "26"
+            Content-Type: application/x-www-form-urlencoded
+            Host: localhost:8080
+            User-Agent: curl/7.81.0
+        body: '{ spacex_launches {name} }'
+        timestamp: 2024-03-27T20:53:57.586498947+05:30
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Origin: '*'
+            Content-Length: "3240"
+            Content-Type: application/json
+            Date: Wed, 27 Mar 2024 15:23:57 GMT
+            Vary: origin,access-control-request-method,access-control-request-headers
+        body: '[{"name":"FalconSat"},{"name":"DemoSat"},{"name":"Trailblazer"},{"name":"RatSat"},{"name":"RazakSat"},{"name":"Falcon 9 Test Flight"},{"name":"COTS 1"},{"name":"COTS 2"},{"name":"CRS-1"},{"name":"CRS-2"},{"name":"CASSIOPE"},{"name":"SES-8"},{"name":"Thaicom 6"},{"name":"CRS-3"},{"name":"OG-2 Mission 1"},{"name":"AsiaSat 8"},{"name":"AsiaSat 6"},{"name":"CRS-4"},{"name":"CRS-5"},{"name":"DSCOVR"},{"name":"ABS-3A / Eutelsat 115W B"},{"name":"CRS-6"},{"name":"TürkmenÄlem 52°E / MonacoSAT"},{"name":"CRS-7"},{"name":"OG-2 Mission 2"},{"name":"Jason 3"},{"name":"SES-9"},{"name":"CRS-8"},{"name":"JCSAT-2B"},{"name":"Thaicom 8"},{"name":"ABS-2A / Eutelsat 117W B"},{"name":"CRS-9"},{"name":"JCSAT-16"},{"name":"Amos-6"},{"name":"Iridium NEXT Mission 1"},{"name":"CRS-10"},{"name":"EchoStar 23"},{"name":"SES-10"},{"name":"NROL-76"},{"name":"Inmarsat-5 F4"},{"name":"CRS-11"},{"name":"BulgariaSat-1"},{"name":"Iridium NEXT Mission 2"},{"name":"Intelsat 35e"},{"name":"CRS-12"},{"name":"FormoSat-5"},{"name":"Boeing X-37B OTV-5"},{"name":"Iridium NEXT Mission 3"},{"name":"SES-11 / Echostar 105"},{"name":"KoreaSat 5A"},{"name":"CRS-13"},{"name":"Iridium NEXT Mission 4"},{"name":"ZUMA"},{"name":"SES-16 / GovSat-1"},{"name":"Falcon Heavy Test Flight"},{"name":"Paz / Starlink Demo"},{"name":"Hispasat 30W-6"},{"name":"Iridium NEXT Mission 5"},{"name":"CRS-14"},{"name":"TESS"},{"name":"Bangabandhu-1"},{"name":"Iridium NEXT Mission 6"},{"name":"SES-12"},{"name":"CRS-15"},{"name":"Telstar 19V"},{"name":"Iridium NEXT Mission 7"},{"name":"Merah Putih"},{"name":"Telstar 18V"},{"name":"SAOCOM 1A"},{"name":"Es’hail 2"},{"name":"SSO-A"},{"name":"CRS-16"},{"name":"GPS III SV01"},{"name":"Iridium NEXT Mission 8"},{"name":"Nusantara Satu (PSN-6) / S5 / Beresheet"},{"name":"CCtCap Demo Mission 1"},{"name":"ArabSat 6A"},{"name":"CRS-17"},{"name":"Starlink v0.9"},{"name":"RADARSAT Constellation"},{"name":"STP-2"},{"name":"CRS-18"},{"name":"Amos-17"},{"name":"Starlink-1"},{"name":"CRS-19"},{"name":"JCSat 18 / Kacific 1"},{"name":"Starlink-2"},{"name":"Crew Dragon In Flight Abort Test"},{"name":"Starlink-3"},{"name":"Starlink-4"},{"name":"CRS-20"},{"name":"Starlink-5"},{"name":"Starlink-6"},{"name":"Starlink-7"},{"name":"CCtCap Demo Mission 2"},{"name":"Starlink-8 & SkySat 16-18"},{"name":"SAOCOM 1B, GNOMES-1, Tyvak-0172"},{"name":"GPS III SV03 (Columbus)"},{"name":"SXM-7"},{"name":"GPS III SV04 (Sacagawea)"},{"name":"Crew-1"},{"name":"GPS III SV05"},{"name":"CRS-21"},{"name":"Turksat 5A"},{"name":"ANASIS-II"},{"name":"Starlink-9 (v1.0) & BlackSky Global 5-6"},{"name":"Starlink-10 (v1.0) & SkySat 19-21"},{"name":"Sentinel-6 Michael Freilich"},{"name":"Starlink-11 (v1.0)"},{"name":"Starlink-12 (v1.0)"},{"name":"Starlink-13 (v1.0)"},{"name":"Starlink-14 (v1.0)"},{"name":"NROL-108"},{"name":"Starlink-15 (v1.0)"},{"name":"Starlink-16 (v1.0)"},{"name":"Starlink-17 (v1.0)"},{"name":"Transporter-1"},{"name":"SARah 1"},{"name":"Crew-2"},{"name":"SXM-8"},{"name":"CRS-22"},{"name":"USSF-44"},{"name":"USSF-52"},{"name":"Turksat 5B"},{"name":"DART"},{"name":"CRS-23"},{"name":"Crew-3"},{"name":"Starlink-18 (v1.0)"},{"name":"Starlink-19 (v1.0)"},{"name":"Starlink-20 (v1.0)"},{"name":"Starlink-21 (v1.0)"},{"name":"Transporter-2"}]'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-03-27T20:53:59.62771696+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Content-Length: []
+            header.Date: []
+    created: 1711553039
+curl: |-
+    curl --request POST \
+      --url http://localhost:8080/api/graphql \
+      --header 'User-Agent: curl/7.81.0' \
+      --header 'Accept: */*' \
+      --header 'Content-Type: application/x-www-form-urlencoded' \
+      --header 'Host: localhost:8080' \
+      --data '{ spacex_launches {name} }'

@@ -1,0 +1,40 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+  metadata: {}
+  req:
+    method: GET
+    proto_major: 1
+    proto_minor: 1
+    url: http://localhost:8080/api/kv/spacex_launch_name/600f9a8d8f798e2a4d5f979e
+    header:
+      Accept: "*/*"
+      Host: localhost:8080
+      User-Agent: curl/7.81.0
+    body: ""
+    timestamp: 2024-03-27T20:41:19.032380362+05:30
+  resp:
+    status_code: 200
+    header:
+      Access-Control-Allow-Origin: "*"
+      Content-Length: "18"
+      Content-Type: text/plain; charset=utf-8
+      Date: Wed, 27 Mar 2024 15:11:19 GMT
+      Vary: origin,access-control-request-method,access-control-request-headers
+    body: Starlink-21 (v1.0)
+    status_message: OK
+    proto_major: 0
+    proto_minor: 0
+    timestamp: 2024-03-27T20:41:21.086844273+05:30
+  objects: []
+  assertions:
+    noise:
+      header.Date: []
+  created: 1711552281
+curl: |
+  curl --request GET \
+    --url http://localhost:8080/api/kv/spacex_launch_name/600f9a8d8f798e2a4d5f979e \
+    --header 'User-Agent: curl/7.81.0' \
+    --header 'Accept: */*' \
+    --header 'Host: localhost:8080' \
